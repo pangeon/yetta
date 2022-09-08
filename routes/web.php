@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\notesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/wpisy', function () {
-    return view('notes.index');
-});
-Route::get('/wpisy/dodaj', function () {
-    return view('notes.create');
-});
+
+Route::get('/wpisy', [notesController::class, 'index']);
+Route::get('/wpisy/dodaj', [notesController::class, 'create']);
