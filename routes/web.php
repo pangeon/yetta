@@ -18,5 +18,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/wpisy', [notesController::class, 'index']);
-Route::get('/wpisy/dodaj', [notesController::class, 'create']);
+Route::get('/wpisy', [notesController::class, 'index']) -> name('notes.index');
+Route::get('/wpisy/dodaj', [notesController::class, 'create']) -> name('notes.create');
+Route::post('/wpisy/zapisz', [notesController::class, 'store']) -> name('notes.store');

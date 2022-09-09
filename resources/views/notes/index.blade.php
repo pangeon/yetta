@@ -17,6 +17,7 @@
                 {{ $note->date }}<br />
                 {{ $note->body }}<br />
                 {{ $note->secret_key }}
+                <hr />
             @endforeach
         </div>
     </section>
