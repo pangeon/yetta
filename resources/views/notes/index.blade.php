@@ -3,13 +3,31 @@
 @section('content')
     <section class="masthead page-section portfolio" id="portfolio">
         <div class="container">
+
+            @if(session() -> has('message'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                 <div class="container vertial-middle">
+                    <div class="row align-items-center">
+                        <div class="col-1">
+                            <i style="font-size: 26px" class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="col-11" style="text-align: center; font-weight: bolder">
+                            {{ session() -> get('message') }}
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <br />
+            @endif
+
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ $h2_title }}</h2>
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-            
+        
             @foreach ($notes as $note)
                 <div class="toast fade show float-start" role="alert" aria-live="assertive" aria-atomic="true" style="margin-left: 20px; margin-top: 20px;">
                     <div class="toast-header">
@@ -29,6 +47,16 @@
                         {{ $note->body }}
                         <div class="alert alert-danger" role="alert" style="font-size: 10px; margin-top: 0.5rem; padding: 0.4rem 0.4rem; text-align: center;">
                             {{ $note->secret_key }}
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4" style="text-align: center">
+                                    <a href="{{ route('notes.edit', ['id' => $note->id]) }}" class="toast-actions">Zmień dane</a>
+                                </div>
+                                <div class="col-4" style="text-align: center">
+                                    <a href="#" class="toast-actions">Usuń</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

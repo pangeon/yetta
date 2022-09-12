@@ -20,4 +20,6 @@ Route::get('/', function () {
 
 Route::get('/wpisy', [notesController::class, 'index']) -> name('notes.index');
 Route::get('/wpisy/dodaj', [notesController::class, 'create']) -> name('notes.create');
+Route::get('/wpisy/do-edycji/{id}', [notesController::class, 'find_for_update']) -> name('notes.edit');
+Route::put('/wpisy/edytuj/{id}', [notesController::class, 'update']) -> name('notes.update');
 Route::post('/wpisy/zapisz', [notesController::class, 'store']) -> name('notes.store');

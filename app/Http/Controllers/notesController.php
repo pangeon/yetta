@@ -17,6 +17,12 @@ class notesController extends Controller
     {
         return view('notes.create');
     }
+
+    function find_for_update($id) {
+        $note = Note::find($id);
+        return view('notes.edit', ['note' => $note]);
+    }
+
     function store(Request $request)
     {
         $note = new Note();
@@ -29,6 +35,21 @@ class notesController extends Controller
 
         $note -> save();
 
-        return redirect() -> route('notes.index');
+        return redirect() -> route('notes.index') -> with('message', 'Operacja zakończona powodzeniem.');
+        
+    }
+    function update($id, Request $request)
+    {
+        $note = Note::find($id);
+        $note -> title = $request -> title;
+        $note -> author = $request -> author;
+        $note -> category = $request -> category;
+        $note -> date = date("Y/m/d");
+        $note -> body = $request -> body;
+
+        $note -> save();
+
+        return redirect() -> route('notes.index') -> with('message', 'Aktualizacja danych zakończona powodzeniem.');
+        
     }
 }

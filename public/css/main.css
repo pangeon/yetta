@@ -1,0 +1,10 @@
+.toast-actions {
+    font-size: 12px;
+    color: silver; 
+    text-decoration: none;
+}
+.toast-actions:hover {
+    font-size: 12px;
+    color: grey; 
+    text-decoration: none;
+}
