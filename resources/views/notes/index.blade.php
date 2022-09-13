@@ -54,7 +54,11 @@
                                     <a href="{{ route('notes.edit', ['id' => $note->id]) }}" class="toast-actions">Zmień dane</a>
                                 </div>
                                 <div class="col-4" style="text-align: center">
-                                    <a href="#" class="toast-actions">Usuń</a>
+                                    <form method="POST" action="{{ route('notes.delete', ['id' => $note->id]) }}">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="toast-actions transparent-button">Usuń</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

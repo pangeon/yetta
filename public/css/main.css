@@ -8,3 +8,7 @@
     color: grey; 
     text-decoration: none;
 }
+.transparent-button {
+    border: none;
+    background-color: Transparent;
+}

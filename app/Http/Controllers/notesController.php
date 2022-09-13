@@ -23,6 +23,11 @@ class notesController extends Controller
         return view('notes.edit', ['note' => $note]);
     }
 
+    function delete($id) {
+        Note::destroy($id);
+        return redirect() -> route('notes.index') -> with('message', 'Prawidłowe usunięcie notatki.');
+    }
+
     function store(Request $request)
     {
         $note = new Note();
