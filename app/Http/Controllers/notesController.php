@@ -44,6 +44,7 @@ class notesController extends Controller
         $note -> author = $request -> author;
         $note -> category = $request -> category;
         $note -> body = $request -> body;
+        $note -> color = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
         $note -> secret_key = bin2hex(random_bytes(18));
 
         $note -> save();

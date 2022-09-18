@@ -1,4 +1,4 @@
-.toast-actions {
+.toast-actions  {
     font-size: 12px;
     color: silver; 
     text-decoration: none;
@@ -11,4 +11,8 @@
 .transparent-button {
     border: none;
     background-color: Transparent;
+}
+.date-look {
+    color: grey; 
+    font-size: 10px;
 }

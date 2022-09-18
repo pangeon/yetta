@@ -18,6 +18,7 @@ class CreateNotesTable extends Migration
             $table->string('title', 255);
             $table->string('author', 255);
             $table->string('category', 255);
+            $table->string('color', 7);
             $table->text('body');
             $table->string('secret_key');
             $table->timestamps();

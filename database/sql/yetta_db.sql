@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 13 Wrz 2022, 22:27
+-- Czas generowania: 18 Wrz 2022, 20:51
 -- Wersja serwera: 10.4.24-MariaDB
 -- Wersja PHP: 7.4.29
 
@@ -71,9 +71,9 @@ CREATE TABLE `notes` (
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `author` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` date NOT NULL,
+  `color` varchar(7) COLLATE utf8mb4_unicode_ci NOT NULL,
   `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `secret_key` int(11) NOT NULL,
+  `secret_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -82,12 +82,13 @@ CREATE TABLE `notes` (
 -- Zrzut danych tabeli `notes`
 --
 
-INSERT INTO `notes` (`id`, `title`, `author`, `category`, `date`, `body`, `secret_key`, `created_at`, `updated_at`) VALUES
-(1, 'Logotypy', 'Kamil Cecherz', 'web-design', '2022-09-08', 'Projektowanie logotypów wymaga dużej wiedzy i wyczucia smaku.', 39248968, NULL, NULL),
-(2, 'HTML I CSS to podstawa', 'Kamil Cecherz', 'Aplikacje webowe', '2022-09-12', 'Nie da się tworzyć stron WWW nie znając bazowych technologii jak HTML i CSS dlatego każdy programista zaczyna od front-end\'u.', 789065431, '2022-09-09 13:00:40', '2022-09-12 13:48:34'),
-(3, 'Programowanie w Pythonie', 'Agnieszka Lasota', 'Nauka programowania', '2022-09-12', 'Python jest prostym językiem do nauki na początek przygody z programowaniem, co nie oznacza, że pisanie w nim jest w nim łatwiejsze.', 875665, '2022-09-09 18:40:30', '2022-09-12 13:49:16'),
-(4, 'Clojure - język funkcyjny', 'Kamil Cecherz', 'Programowanie funkcyjne', '2022-09-09', 'Clojure to język funkcyjny wysokiego poziomu przeznaczony dla zaawansowych programistów. Jest on bardziej ekspresyjny przez to trudniejszy w opanowaniu.', 86567777, '2022-09-09 18:43:00', '2022-09-09 18:43:00'),
-(5, 'Błędy składniowe', 'Agnieszka Lasota', 'Nauka programowania', '2022-09-12', 'Początkujący bardzo często popełniają błędy składniowe, przejawiące się w postaci braku średnika końcu instrukcji. Jest to prosty w weryfikacji bug, spędza on jednak godziny czasu adeptom kodowania.', 131355, '2022-09-12 11:05:07', '2022-09-12 13:40:25');
+INSERT INTO `notes` (`id`, `title`, `author`, `category`, `color`, `body`, `secret_key`, `created_at`, `updated_at`) VALUES
+(1, 'Logotypy', 'Kamil Cecherzka', 'web-design', '#fcba03', 'Python jest prostym językiem do nauki na początek przygody z programowaniem, co nie oznacza, że pisanie w nim jest w nim łatwiejsze.', '5f9d7751b9ab15a6fee7275f2437bb21755c', '2022-09-17 18:13:18', '2022-09-18 18:13:18'),
+(2, 'HTML I CSS to podstawa', 'Kamil Cecherz', 'Aplikacje webowe', '#5e03fc', 'Nie da się tworzyć stron WWW nie znając bazowych technologii jak HTML i CSS dlatego każdy programista zaczyna od front-end\'u.', '62d31925e42a4d1902948dd18b3513cead50', '2022-09-01 08:13:47', '2022-09-07 06:25:47'),
+(3, 'Programowanie w Pythonie', 'Agnieszka Lasota', 'Nauka programowania', '#872f35', 'Python jest prostym językiem do nauki na początek przygody z programowaniem, co nie oznacza, że pisanie w nim jest w nim łatwiejsze.', '548b60d87effc1da90f1f36ac9950dd78f00', '2022-09-06 09:15:53', '2022-09-12 06:15:53'),
+(4, 'Clojure - język funkcyjny', 'Kamil Cecherz', 'Programowanie funkcyjne', '#6aad72', 'Clojure to język funkcyjny wysokiego poziomu przeznaczony dla zaawansowych programistów. Jest on bardziej ekspresyjny przez to trudniejszy w opanowaniu.', '8407eeef43a9c8acd3a374410cfad6647fd0', '2022-09-04 01:17:25', '2022-09-14 03:17:25'),
+(5, 'Błędy składniowe', 'Agnieszka Lasota', 'Nauka programowania', '#27e3e0', 'Początkujący bardzo często popełniają błędy składniowe, przejawiące się w postaci braku średnika końcu instrukcji. Jest to prosty w weryfikacji bug, spędza on jednak godziny czasu adeptom kodowania.', 'c6acd465dedfef8fd16d4aa21404f91544c1', '2018-09-04 03:17:51', '2019-09-10 18:17:51'),
+(6, 'Laravel vs Symfony', 'Kamil Cecherz', 'Programowanie webowe', '#cc0e33', 'Dwa najważniejsze frameworki dla technlogii PHP to Laravel oraz Symfony. Ich znajomość jest konieczna dla każdego web-dewelopera back-end dewelopera. Podstawę stanowi jednak HTML i CSS', '3b35eecb6deea1e574a46a31a2ee2058d755', '2022-09-18 16:10:07', '2022-09-18 16:11:41');
 
 -- --------------------------------------------------------
 
