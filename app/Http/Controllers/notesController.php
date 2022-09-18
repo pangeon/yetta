@@ -30,26 +30,12 @@ class notesController extends Controller
 
     function store(Request $request)
     {
-        function key_gen() {
-            $calendar = date("Y/m/d");
-            $calendar_numbers_as_str = '';
-            for ($i = 0; $i<10; $i++) {
-                if ($calendar[$i] != "/") {
-                    $calendar_numbers_as_str .= $calendar[$i];
-                }
-            }
-
-            $calendar_data_as_int = (int)$calendar_numbers_as_str * 13;
-            return $calendar_data_as_int;
-        }
-        
         $request -> validate(
             [
                 'title' => 'required',
                 'author' => 'required',
                 'category' => 'required',
-                'body' => 'required',
-                'secret_key' => 'required|digits:9|in:'. key_gen(),
+                'body' => 'required'
             ]
         );
 
@@ -57,9 +43,8 @@ class notesController extends Controller
         $note -> title = $request -> title;
         $note -> author = $request -> author;
         $note -> category = $request -> category;
-        $note -> date = date("Y/m/d");
         $note -> body = $request -> body;
-        $note -> secret_key = $request -> secret_key;
+        $note -> secret_key = bin2hex(random_bytes(18));
 
         $note -> save();
 
@@ -72,7 +57,6 @@ class notesController extends Controller
         $note -> title = $request -> title;
         $note -> author = $request -> author;
         $note -> category = $request -> category;
-        $note -> date = date("Y/m/d");
         $note -> body = $request -> body;
 
         $note -> save();

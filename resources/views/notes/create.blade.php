@@ -47,11 +47,6 @@
                         <label for="body">Treść notatki</label>
                         <div class="invalid-feedback" data-sb-feedback="required">Pole jest wymagane</div>
                     </div>
-                    <div class="form-floating mb-3">
-                        <input class="form-control" value="{{ old('secret_key') }}" id="secret_key" name="secret_key" type="text" required></input>
-                        <label for="secret_key">Klucz wpisu</label>
-                        <div class="invalid-feedback" data-sb-feedback="required">Pole jest wymagane</div>
-                    </div>
                     <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Wyślij</button>
                 </form>
             </div>
