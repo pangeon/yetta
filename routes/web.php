@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('login');
 });
 
 Route::get('/wpisy', [notesController::class, 'index']) -> name('notes.index');
