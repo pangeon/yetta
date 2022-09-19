@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+
 <div class="container masthead" style="width: 60%">
     <div class="card mb-3">
         <div class="row g-0 d-flex align-items-center">
@@ -10,7 +11,7 @@
             </div>
             <div class="col-lg-8">
                 <div class="card-body py-5 px-md-5">
-
+                    @if (empty($_SESSION['user']))
                     <form action="{{ asset('php/login.php') }}" method="POST">
                         <div class="form-outline mb-4">
                             <input type="email" id="login-email" name="login-email" class="form-control" placeholder="Email" />
@@ -20,7 +21,9 @@
                         </div>
                         <button type="submit" class=" login-form-button btn btn-primary btn-block mb-4">Zaloguj</button>
                     </form>
-                    
+                    @else
+                        <p>Zalogowano</p>
+                    @endif                    
                 </div>
             </div>
         </div>
