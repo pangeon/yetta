@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\notesController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('index');
 });
 
+Route::get('/panel', [AuthController::class, 'dashboard']);
+Route::get('/login', [AuthController::class, 'index'])->name('auth.login'); 
 Route::get('/wpisy', [notesController::class, 'index']) -> name('notes.index');
 Route::get('/wpisy/dodaj', [notesController::class, 'create']) -> name('notes.create');
 Route::get('/wpisy/do-edycji/{id}', [notesController::class, 'find_for_update']) -> name('notes.edit');
