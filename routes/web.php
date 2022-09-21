@@ -19,8 +19,13 @@ Route::get('/', function () {
     return view('index');
 });
 
+/* Security */
 Route::get('/panel', [AuthController::class, 'dashboard']);
-Route::get('/login', [AuthController::class, 'index'])->name('auth.login'); 
+Route::get('/login', [AuthController::class, 'index'])->name('auth.login');
+Route::post('/app-login', [AuthController::class, 'appLogin'])->name('auth.app-login');
+Route::get('/app-logout', [AuthController::class, 'appLogout'])->name('logout');
+
+/* Notes manager */
 Route::get('/wpisy', [notesController::class, 'index']) -> name('notes.index');
 Route::get('/wpisy/dodaj', [notesController::class, 'create']) -> name('notes.create');
 Route::get('/wpisy/do-edycji/{id}', [notesController::class, 'find_for_update']) -> name('notes.edit');

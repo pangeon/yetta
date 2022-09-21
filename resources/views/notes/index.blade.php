@@ -53,6 +53,7 @@
                         </div>
                         <div class="container">
                             <div class="row">
+                                @auth
                                 <div class="col-4" style="text-align: center">
                                     <a href="{{ route('notes.edit', ['id' => $note->id]) }}" class="toast-actions">Zmień dane</a>
                                 </div>
@@ -63,6 +64,7 @@
                                         <button class="toast-actions transparent-button">Usuń</button>
                                     </form>
                                 </div>
+                                @endauth
                             </div>
                         </div>
                     </div>

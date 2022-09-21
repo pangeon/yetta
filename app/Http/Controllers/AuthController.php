@@ -15,7 +15,7 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function AppLogin(Request $req)
+    public function appLogin(Request $req)
     {
         $req->validate(
             [
@@ -26,7 +26,7 @@ class AuthController extends Controller
 
         $credentials = $req->only('email', 'password');
         if(Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')->withSuccess('Zalogowano');
+            return redirect()->intended('wpisy')->withSuccess('Zalogowano');
         }
 
         return redirect('login')->withSuccess('Logowanie się nie powiodło');
@@ -39,7 +39,7 @@ class AuthController extends Controller
         return redirect("login")->withSuccess('Nie masz wymaganych uprawnień');
     }
 
-    public function AppLogout() {
+    public function appLogout() {
         Session::flush();
         Auth::logout();
 

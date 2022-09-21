@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+
 <section class="masthead page-section" id="contact">
     <div class="container">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Edytuj notatkę</h2>
@@ -9,6 +10,7 @@
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
             <div class="divider-custom-line"></div>
         </div>
+        @auth
         <div class="row justify-content-center">
             <div class="col-lg-8 col-xl-7">
                 <form id="contactForm" action="{{ route('notes.update', ['id' => $note->id]) }}" method="POST" data-sb-form-api-token="API_TOKEN">
@@ -36,5 +38,7 @@
                 </form>
             </div>
         </div>
+        @endauth
 </section>
+
 @endsection

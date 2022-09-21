@@ -12,12 +12,19 @@
             <div class="col-lg-8">
                 <div class="card-body py-5 px-md-5">
                     @guest
-                    <form action="{{ asset('php/login.php') }}" method="POST">
+                    <form action="{{ route('auth.app-login') }}" method="POST">
+                        {{ csrf_field() }}
                         <div class="form-outline mb-4">
-                            <input type="email" id="login-email" name="login-email" class="form-control" placeholder="Email" />
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" />
+                            @if ($errors->has('email'))
+                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                            @endif
                         </div>
                         <div class="form-outline mb-4">
-                            <input type="password" id="login-password" name="login-password" class="form-control" placeholder="Hasło" />
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Hasło" />
+                            @if ($errors->has('password'))
+                                <span class="text-danger">{{ $errors->first('password') }}</span>
+                            @endif
                         </div>
                         <button type="submit" class=" login-form-button btn btn-primary btn-block mb-4">Zaloguj</button>
                     </form>
