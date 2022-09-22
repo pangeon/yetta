@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container masthead">
-    <a href="/panel">Panel edycji</a>
+    {{-- {{ $pass }} --}}
 </div>
 </section>
 @endsection

@@ -8,7 +8,7 @@ use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
-class AuthController extends Controller
+class LoginController extends Controller
 {
     public function index()
     {
@@ -26,19 +26,11 @@ class AuthController extends Controller
 
         $credentials = $req->only('email', 'password');
         if(Auth::attempt($credentials)) {
-            return redirect()->intended('wpisy')->withSuccess('Zalogowano');
+            return redirect()->intended('wpisy')->with('massage', 'Zalogowano poprawnie');
         }
 
         return redirect('login')->withSuccess('Logowanie się nie powiodło');
     }
-    public function dashboard()
-    {
-        if(Auth::check()) {
-            return view('dashboard');
-        }
-        return redirect("login")->withSuccess('Nie masz wymaganych uprawnień');
-    }
-
     public function appLogout() {
         Session::flush();
         Auth::logout();

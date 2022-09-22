@@ -4,13 +4,14 @@
 
 <section class="masthead page-section" id="contact">
     <div class="container">
+        @auth
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Edytuj notatkę</h2>
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
             <div class="divider-custom-line"></div>
         </div>
-        @auth
+        
         <div class="row justify-content-center">
             <div class="col-lg-8 col-xl-7">
                 <form id="contactForm" action="{{ route('notes.update', ['id' => $note->id]) }}" method="POST" data-sb-form-api-token="API_TOKEN">
@@ -38,6 +39,24 @@
                 </form>
             </div>
         </div>
+        
+        @else
+
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <div class="container vertial-middle">
+               <div class="row align-items-center">
+                   <div class="col-1">
+                       <i style="font-size: 26px" class="fa-solid fa-circle-exclamation"></i>
+                   </div>
+                   <div class="col-11" style="text-align: center; font-weight: bolder">
+                       Nie masz odpowiednich uprawnień
+                       <br />
+                       <a href="/login" style="text-decoration: none">zaloguj się</a> 
+                   </div>
+               </div>
+           </div>
+           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+       </div>
         @endauth
 </section>
 

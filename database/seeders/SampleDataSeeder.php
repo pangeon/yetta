@@ -64,5 +64,16 @@ class SampleNotesSeeder extends Seeder
                 ]
             )
         );
+        DB::table('users')->
+        insert(
+            array(
+                [
+                    'id' => 999,
+                    'name' => 'admin',
+                    'email' => 'admin@mail.com',
+                    'password' => '$2Y$10$/XTXCKZT7JE7R.UNCKHFBEOEPHVGNINZFVIRRS1IW3L36GRA5ULTW'
+                ]
+            )
+        );
     }
 }
