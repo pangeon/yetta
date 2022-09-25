@@ -12,10 +12,14 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    // public function home() {
+    //     $password = 'admin';
+    //     $hashed = Hash::make($password);
+    //     return view('index', ['pass' => $password .' = '.$hashed]);
+    // }
+    
     public function home() {
-        $password = 'admin';
-        $hashed = Hash::make($password);
-        return view('index', ['pass' => $password .' = '.$hashed]);
+        return view('index');
     }
     
 }

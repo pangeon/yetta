@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 18 Wrz 2022, 20:51
+-- Czas generowania: 25 Wrz 2022, 16:17
 -- Wersja serwera: 10.4.24-MariaDB
 -- Wersja PHP: 7.4.29
 
@@ -85,7 +85,7 @@ CREATE TABLE `notes` (
 INSERT INTO `notes` (`id`, `title`, `author`, `category`, `color`, `body`, `secret_key`, `created_at`, `updated_at`) VALUES
 (1, 'Logotypy', 'Kamil Cecherzka', 'web-design', '#fcba03', 'Python jest prostym językiem do nauki na początek przygody z programowaniem, co nie oznacza, że pisanie w nim jest w nim łatwiejsze.', '5f9d7751b9ab15a6fee7275f2437bb21755c', '2022-09-17 18:13:18', '2022-09-18 18:13:18'),
 (2, 'HTML I CSS to podstawa', 'Kamil Cecherz', 'Aplikacje webowe', '#5e03fc', 'Nie da się tworzyć stron WWW nie znając bazowych technologii jak HTML i CSS dlatego każdy programista zaczyna od front-end\'u.', '62d31925e42a4d1902948dd18b3513cead50', '2022-09-01 08:13:47', '2022-09-07 06:25:47'),
-(3, 'Programowanie w Pythonie', 'Agnieszka Lasota', 'Nauka programowania', '#872f35', 'Python jest prostym językiem do nauki na początek przygody z programowaniem, co nie oznacza, że pisanie w nim jest w nim łatwiejsze.', '548b60d87effc1da90f1f36ac9950dd78f00', '2022-09-06 09:15:53', '2022-09-12 06:15:53'),
+(3, 'Programowanie w Pythonie', 'Agnieszka Lasota', 'Nauka programowania', '#872f35', 'Python jest prostym językiem do nauki na początek przygody z programowaniem, co nie oznacza, że pisanie w nim jest dużo łatwiejsze.', '548b60d87effc1da90f1f36ac9950dd78f00', '2022-09-06 09:15:53', '2022-09-22 15:56:44'),
 (4, 'Clojure - język funkcyjny', 'Kamil Cecherz', 'Programowanie funkcyjne', '#6aad72', 'Clojure to język funkcyjny wysokiego poziomu przeznaczony dla zaawansowych programistów. Jest on bardziej ekspresyjny przez to trudniejszy w opanowaniu.', '8407eeef43a9c8acd3a374410cfad6647fd0', '2022-09-04 01:17:25', '2022-09-14 03:17:25'),
 (5, 'Błędy składniowe', 'Agnieszka Lasota', 'Nauka programowania', '#27e3e0', 'Początkujący bardzo często popełniają błędy składniowe, przejawiące się w postaci braku średnika końcu instrukcji. Jest to prosty w weryfikacji bug, spędza on jednak godziny czasu adeptom kodowania.', 'c6acd465dedfef8fd16d4aa21404f91544c1', '2018-09-04 03:17:51', '2019-09-10 18:17:51'),
 (6, 'Laravel vs Symfony', 'Kamil Cecherz', 'Programowanie webowe', '#cc0e33', 'Dwa najważniejsze frameworki dla technlogii PHP to Laravel oraz Symfony. Ich znajomość jest konieczna dla każdego web-dewelopera back-end dewelopera. Podstawę stanowi jednak HTML i CSS', '3b35eecb6deea1e574a46a31a2ee2058d755', '2022-09-18 16:10:07', '2022-09-18 16:11:41');
@@ -136,6 +136,14 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Zrzut danych tabeli `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Kamil Cecherz', 'pangeon@tlen.pl', '2022-09-21 12:34:14', '$2y$10$O4NzaMJ574iWk6f3dorxeOo7AT6r0Rvu9l3iY6LAzxwhar/89zjrW', NULL, '2022-09-21 12:34:14', '2022-09-21 12:34:14'),
+(100, 'Kamil Cecherz', 'kamil.cecherz@gmail.com', '2022-09-21 12:34:14', '$2y$10$6dXJXtVi35id7X6N/k46a./L/6H.AEXdH2eqdKnL08m/zpsHl2uLm', NULL, '2022-09-21 12:34:14', '2022-09-21 12:34:14');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -201,7 +209,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT dla tabeli `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT dla tabeli `personal_access_tokens`
@@ -213,7 +221,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
