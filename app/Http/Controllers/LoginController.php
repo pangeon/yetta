@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Hash;
 use Session;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
@@ -29,12 +27,14 @@ class LoginController extends Controller
             return redirect()->intended('wpisy')->with('massage', 'Zalogowano poprawnie');
         }
 
-        return redirect('login')->withSuccess('Logowanie się nie powiodło');
+        return redirect('panel-logowania')->withSuccess('Logowanie się nie powiodło');
     }
-    public function appLogout() {
+
+    public function appLogout() 
+    {
         Session::flush();
         Auth::logout();
 
-        return Redirect('login');
+        return Redirect('panel-logowania');
     } 
 }

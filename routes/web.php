@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\NotesController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,9 +23,11 @@ Route::get('/', [Controller::class, 'home'])->name('home');
 Route::get('/wpisy', [NotesController::class, 'index']) -> name('notes.index');
 
 /* Security */
-Route::get('/login', [LoginController::class, 'index'])->name('auth.login');
-Route::post('/app-login', [LoginController::class, 'appLogin'])->name('auth.app-login');
-Route::get('/app-logout', [LoginController::class, 'appLogout'])->name('logout');
+Route::get('/panel-logowania', [LoginController::class, 'index'])->name('auth.login');
+Route::post('/logowanie', [LoginController::class, 'appLogin'])->name('auth.app-login');
+Route::get('/wyloguj', [LoginController::class, 'appLogout'])->name('auth.logout');
+Route::get('/nowe-konto', [RegisterController::class, 'index'])->name('auth.new_account');
+Route::post('/rejestruj', [RegisterController::class, 'register'])->name('auth.register');
 
 /* Notes manager */
 Route::get('/wpisy/dodaj', [NotesController::class, 'create']) -> name('notes.create');

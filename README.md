@@ -1,7 +1,10 @@
 # Yetta
 
 Simple web notes manager. Visit page: [yetta.cecherz.pl](http://yetta.cecherz.pl/)
+# Changelog
 
+- **version 1.0.5**
+    - add possibility of registering new users
 # Screenshots
 
 ![screen_shot_1](public/assets/img/screenshots/yetta_screenshot_1.jpg)
@@ -77,3 +80,5 @@ If you want to change the authorization data, you do it in the database. Passwor
 #  Tutorials
 * [Laravel 9 Custom Auth Login and Registration](https://www.positronx.io/laravel-custom-authentication-login-and-registration-tutorial/)
 * [Deploy Laravel To Shared Hosting The Easy Way](https://youtu.be/6g8G3YQtQt4)
+* [How to create a multilingual project in Laravel 8](https://dev.to/jeromew90/how-to-create-a-multilingual-project-in-laravel-internationalization-i18n-11ol)
+* [YT: Laravel Localization](https://www.youtube.com/watch?v=e6ccPgI8aHk)

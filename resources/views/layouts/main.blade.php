@@ -40,7 +40,7 @@
                             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('notes.create') }}">Dodaj wpis</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('logout') }}">Wyloguj</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('auth.logout') }}">Wyloguj</a>
                         </li>
                         @endguest
                     </ul>
@@ -82,7 +82,7 @@
             </div>
         </footer>
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy;&nbsp; <a href="https://cecherz.pl/" style="text-decoration: none">Kamil Cecherz</a>&nbsp; {{ date('Y') }}</small></div>
+            <div class="container"><small>Copyright &copy;&nbsp; <a href="https://cecherz.pl/" style="text-decoration: none">Kamil Cecherz</a>&nbsp; {{ date('Y') }}&nbsp; - wersja {{ $version }}</small></div>
         </div>
         <script src="https://kit.fontawesome.com/a0c9248b8d.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
