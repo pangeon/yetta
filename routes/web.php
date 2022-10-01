@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\NotesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LangController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 /* Public */
 Route::get('/', [Controller::class, 'home'])->name('home');
 Route::get('/wpisy', [NotesController::class, 'index']) -> name('notes.index');
+
+/* Localization */
+Route::get('lang/{locale}', [LangController::class, 'setLang']);
 
 /* Security */
 Route::get('/panel-logowania', [LoginController::class, 'index'])->name('auth.login');

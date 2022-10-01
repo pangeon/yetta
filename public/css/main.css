@@ -56,3 +56,9 @@
 .bagde-changelog {
     margin-left: 1%;
 }
+.navbar-main {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-weight: 700 !important;
+}

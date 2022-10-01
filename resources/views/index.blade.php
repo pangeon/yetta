@@ -6,6 +6,7 @@
     <div class="row text-center">
         <div class="col">
             <h1>Changelog</h1>
+            @lang("Home")
         </div>
     </div>
     <br />

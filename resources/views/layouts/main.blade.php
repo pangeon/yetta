@@ -1,3 +1,5 @@
+@php $locale = session()->get('locale'); @endphp
+
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -24,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('home') }}">Strona główna</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('home') }}">@lang("Strona główna")</a>
                         </li>
                         
                         @guest                        
@@ -45,6 +47,40 @@
                         @endguest
                     </ul>
                 </div>
+
+                {{-- LOCALIZATION FLAG MENU --}}
+                <div class="dropdown" style="margin-left: 50px;">
+                    <button class="btn btn-secondary dropdown-toggle navbar-main" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        @switch($locale)
+                            @case('pl')
+                            <img src="{{asset('assets/img/flags/pl.png')}}" width="25px">
+                            @break
+
+                            @case('en')
+                            <img src="{{asset('assets/img/flags/gb.png')}}" width="25px">
+                            @break
+
+                            @default
+                            <img src="{{asset('assets/img/flags/pl.png')}}" width="25px">
+                        @endswitch
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li>
+                            <a role="button" href="lang/pl" class="dropdown-item" type="button">
+                                <img src="{{asset('assets/img/flags/pl.png')}}" width="25px">&nbsp;&nbsp;
+                                <span style="vertical-align: middle;">POLSKI</span>
+                            </a>
+                        </li>
+                        <li>  
+                            <a role="button" href="lang/en" class="dropdown-item" type="button">
+                                <img src="{{ asset('assets/img/flags/gb.png') }}" width="25px">&nbsp;&nbsp;
+                                <span style="vertical-align: middle;">ENGLISH</span>
+                            </a>    
+                        </li>
+                    </ul>
+                </div>
+                {{-- LOCALIZATION FLAG MENU --}}
+
             </div>
         </nav>
 
