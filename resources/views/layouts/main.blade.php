@@ -82,7 +82,7 @@
             </div>
         </footer>
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy;&nbsp; <a href="https://cecherz.pl/" style="text-decoration: none">Kamil Cecherz</a>&nbsp; {{ date('Y') }}&nbsp; - wersja {{ $version }}</small></div>
+            <div class="container"><small>Copyright &copy;&nbsp; <a href="https://cecherz.pl/" style="text-decoration: none">{{ $author }}</a>&nbsp; {{ date('Y') }}&nbsp; - wersja: {{ $version }}</small></div>
         </div>
         <script src="https://kit.fontawesome.com/a0c9248b8d.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

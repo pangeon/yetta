@@ -1,7 +1,3 @@
-@php
-$version = '1.0.5';
-@endphp
-
 @extends('layouts.main')
 
 @section('content')
