@@ -20,8 +20,8 @@
                         <div class="form-outline mb-4">
                             <input type="password" id="password" name="password" class="form-control" placeholder="Hasło" />
                         </div>
-                        <button type="submit" class="login-form-button btn btn-primary btn-block mb-4">Zaloguj</button>
-                        <a class="login-form-button btn btn-primary btn-block mb-4" href="{{ route('auth.new_account')}}">Rejestruj</a>
+                        <button type="submit" class="login-form-button btn btn-primary btn-block mb-4">@lang('public.log_in')</button>
+                        <a class="login-form-button btn btn-primary btn-block mb-4" href="{{ route('auth.new_account')}}">@lang('public.sign_up')</a>
                     </form>
                     @endguest
                 </div>

@@ -5,7 +5,7 @@
 <section class="masthead page-section" id="contact">
     <div class="container">
         @auth
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Edytuj notatkę</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">@lang('public.edit_note')</h2>
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -21,21 +21,21 @@
 
                     <div class="form-floating mb-3">
                         <input value="{{ $note -> title }}" class="form-control" id="title" name="title" type="text" />
-                        <label for="name">Tytuł</label>
+                        <label for="name">@lang('public.title')</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input value="{{ $note -> author }}" class="form-control" id="author" name="author" type="text" />
-                        <label for="author">Autor</label>
+                        <label for="author">@lang('public.author')</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input value="{{ $note -> category }}" class="form-control" id="category" name="category" type="text" />
-                        <label for="category">Kategoria</label>
+                        <label for="category">@lang('public.category')</label>
                     </div>
                     <div class="form-floating mb-3">
                         <textarea class="form-control" id="body" name="body" type="text" style="height: 10rem">{{ $note -> body }}</textarea>
-                        <label for="body">Treść notatki</label>
+                        <label for="body">@lang('public.content')</label>
                     </div>
-                    <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Zapisz zmiany</button>
+                    <button class="btn btn-primary btn-xl" id="submitButton" type="submit">@lang('public.save_changes')</button>
                 </form>
             </div>
         </div>
@@ -49,9 +49,9 @@
                        <i style="font-size: 26px" class="fa-solid fa-circle-exclamation"></i>
                    </div>
                    <div class="col-11" style="text-align: center; font-weight: bolder">
-                       Nie masz odpowiednich uprawnień
+                        @lang('public.access_denied')
                        <br />
-                       <a href="/login" style="text-decoration: none">zaloguj się</a> 
+                       <a href="/login" style="text-decoration: none">@lang('public.log_in')</a> 
                    </div>
                </div>
            </div>

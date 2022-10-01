@@ -5,6 +5,9 @@ Simple web notes manager. Visit page: [yetta.cecherz.pl](http://yetta.cecherz.pl
 
 - **version 1.0.5**
     - add possibility of registering new users
+
+- **version 1.0.9**
+    - add localization and translate 90% *pol to eng* 
 # Screenshots
 
 ![screen_shot_1](public/assets/img/screenshots/yetta_screenshot_1.jpg)

@@ -23,7 +23,7 @@
                         <div class="form-outline mb-4">
                             <input type="password" id="password" name="password" class="form-control" placeholder="Hasło" required />
                         </div>
-                        <button type="submit" class="register-form-button btn btn-primary btn-block mb-4">Rejestruj</button>
+                        <button type="submit" class="register-form-button btn btn-primary btn-block mb-4">@lang('public.sign_up')</button>
                     </form>
                     @endguest
                 </div>

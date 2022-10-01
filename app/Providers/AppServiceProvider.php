@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share('version', '1.06');
+        View::share('version', '1.09');
         View::share('author', 'Kamil Cecherz');
     }
 }

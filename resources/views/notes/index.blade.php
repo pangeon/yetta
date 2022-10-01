@@ -21,7 +21,7 @@
             <br />
             @endif
 
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ $h2_title }}</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">@lang('public.notes_list')</h2>
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -55,13 +55,13 @@
                             <div class="row">
                                 @auth
                                 <div class="col-4" style="text-align: center">
-                                    <a href="{{ route('notes.edit', ['id' => $note->id]) }}" class="toast-actions">Zmień dane</a>
+                                    <a href="{{ route('notes.edit', ['id' => $note->id]) }}" class="toast-actions">@lang('public.edit')</a>
                                 </div>
                                 <div class="col-4" style="text-align: center">
                                     <form method="POST" action="{{ route('notes.delete', ['id' => $note->id]) }}">
                                         @csrf
                                         @method('delete')
-                                        <button class="toast-actions transparent-button">Usuń</button>
+                                        <button class="toast-actions transparent-button">@lang('public.delete')</button>
                                     </form>
                                 </div>
                                 @endauth

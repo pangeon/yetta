@@ -26,23 +26,23 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('home') }}">@lang("Strona główna")</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('home') }}">@lang('public.home')</a>
                         </li>
                         
                         @guest                        
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('notes.index') }}">Notatki</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('notes.index') }}">@lang('public.notes')</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('auth.login') }}">Logowanie</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('auth.login') }}">@lang('public.log_in')</a>
                         </li>
 
                         @else
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('notes.create') }}">Dodaj wpis</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('notes.create') }}">@lang('public.add_note')</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('auth.logout') }}">Wyloguj</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('auth.logout') }}">@lang('public.logout')</a>
                         </li>
                         @endguest
                     </ul>
@@ -68,13 +68,13 @@
                         <li>
                             <a role="button" href="lang/pl" class="dropdown-item" type="button">
                                 <img src="{{asset('assets/img/flags/pl.png')}}" width="25px">&nbsp;&nbsp;
-                                <span style="vertical-align: middle;">POLSKI</span>
+                                <span style="vertical-align: middle;">@lang('public.polish')</span>
                             </a>
                         </li>
                         <li>  
                             <a role="button" href="lang/en" class="dropdown-item" type="button">
                                 <img src="{{ asset('assets/img/flags/gb.png') }}" width="25px">&nbsp;&nbsp;
-                                <span style="vertical-align: middle;">ENGLISH</span>
+                                <span style="vertical-align: middle;">@lang('public.english')</span>
                             </a>    
                         </li>
                     </ul>
@@ -93,23 +93,23 @@
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Yetta</h4>
                         <p class="lead mb-0">
-                            Aplikacja do tworzenia prostych notatek.
+                            @lang('public.description_of_footer_1')
                             <br />
-                            Sprzyja produktywności, docelowo przeznaczona dla programistów.
+                            @lang('public.description_of_footer_2')
                         </p>
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Kod do pobrania:</h4>
+                        <h4 class="text-uppercase mb-4">@lang('public.code_download')</h4>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/pangeon/yetta"><i class="fab fa-github"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">Wymagania</h4>
+                        <h4 class="text-uppercase mb-4">@lang('public.requirements')</h4>
                         <p class="lead mb-0">
-                            Aplikacja napisana przy użyciu frameworka
+                            @lang('public.description_of_footer_3')
                             <a href="https://laravel.com/" style="text-decoration: none">Laravel</a> 
-                            oraz bezpłatnego szablonu 
+                            @lang('public.description_of_footer_4')
                             <a href="https://startbootstrap.com/theme/freelancer" style="text-decoration: none">Freelancer</a>
                             .
                         </p>
@@ -118,7 +118,7 @@
             </div>
         </footer>
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy;&nbsp; <a href="https://cecherz.pl/" style="text-decoration: none">{{ $author }}</a>&nbsp; {{ date('Y') }}&nbsp; - wersja: {{ $version }}</small></div>
+            <div class="container"><small>Copyright &copy;&nbsp; <a href="https://cecherz.pl/" style="text-decoration: none">{{ $author }}</a>&nbsp; {{ date('Y') }}&nbsp; - @lang('public.version'): {{ $version }}</small></div>
         </div>
         <script src="https://kit.fontawesome.com/a0c9248b8d.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
