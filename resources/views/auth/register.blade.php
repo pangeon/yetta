@@ -15,13 +15,13 @@
                     <form action="{{ route('auth.register') }}" method="POST">
                         {{ csrf_field() }}
                         <div class="form-outline mb-4">
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Nazwa użytkownika" required />
+                            <input type="text" id="name" name="name" class="form-control" placeholder="@lang('public.user_name')" required />
                         </div>
                         <div class="form-outline mb-4">
                             <input type="email" id="email" name="email" class="form-control" placeholder="Email" required />
                         </div>
                         <div class="form-outline mb-4">
-                            <input type="password" id="password" name="password" class="form-control" placeholder="Hasło" required />
+                            <input type="password" id="password" name="password" class="form-control" placeholder="@lang('public.password')" required />
                         </div>
                         <button type="submit" class="register-form-button btn btn-primary btn-block mb-4">@lang('public.sign_up')</button>
                     </form>

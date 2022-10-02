@@ -12,7 +12,11 @@
                             <i style="font-size: 26px" class="fa-solid fa-circle-check"></i>
                         </div>
                         <div class="col-11" style="text-align: center; font-weight: bolder">
+                            @if($locale='en')
                             {{ session() -> get('message') }}
+                            @else
+                            Dupa
+                            @endif
                         </div>
                     </div>
                 </div>

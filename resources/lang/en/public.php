@@ -31,5 +31,14 @@ return [
     'description_of_footer_3' => 'Application written with the framework',
     'description_of_footer_4' => 'and a free template',
     'information' => 'Information',
-    'app' => 'application'
+    'app' => 'application',
+    'user_name' => 'Username',
+    'password' => 'Password',
+    'ver_1_changelog_ptr_1' => 'First secured version of the application.',
+    'ver_1_changelog_ptr_2' => 'Possibility to view notes for guests.',
+    'ver_1_changelog_ptr_3' => 'Data editing only by the application owner.',
+    'ver_11_changelog_ptr_1' => 'New users can be registered.',
+    'ver_11_changelog_ptr_2' => 'Add language versions: English.',
+    'ver_12_changelog_ptr_1' => 'A separate workspace for each user of the application.',
+    'ver_12_changelog_ptr_2' => 'Password reminder option based on e-mail address.',
 ];

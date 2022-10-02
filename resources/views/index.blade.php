@@ -22,17 +22,17 @@
                         <li class="list-group-item">
                             <i class="fas fa-check-circle text-success"></i>
                             &nbsp;&nbsp;
-                            Pierwsza zabezpieczona wersja aplikacji.
+                            @lang('public.ver_1_changelog_ptr_1')
                         </li>
                         <li class="list-group-item">
                             <i class="fas fa-check-circle text-success"></i>
                             &nbsp;&nbsp;
-                            Możliwość widoku notatek dla gości.
+                            @lang('public.ver_1_changelog_ptr_2')
                         </li>
                         <li class="list-group-item">
                             <i class="fas fa-check-circle text-success"></i>
                             &nbsp;&nbsp;
-                            Edycja danych tylko przez właściciela aplikacji.
+                            @lang('public.ver_1_changelog_ptr_3')
                         </li>
                     </ul>
                 </div> 
@@ -41,7 +41,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                @lang('public.version') 1.1&nbsp;<span class="badge bg-secondary bagde-changelog">@lang('public.in_progress') 90%</span>
+                @lang('public.version') 1.1
             </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -51,14 +51,14 @@
                             <li class="list-group-item">
                                 <i class="fas fa-check-circle text-success"></i>
                                 &nbsp;&nbsp;
-                                Możliwość rejestracji nowych użytkowników.
+                                @lang('public.ver_11_changelog_ptr_1')
                                 <span class="badge bg-danger bagde-changelog">@lang('public.version') 1.0.5</span>
                             </li>                        
                             <li class="list-group-item">
                                 <i class="fas fa-check-circle text-success"></i>
                                 &nbsp;&nbsp;
-                                Dodanie wersji językowych: angielski.
-                                <span class="badge bg-danger bagde-changelog">@lang('public.version') 1.0.9</span>
+                                @lang('public.ver_11_changelog_ptr_2')
+                                <span class="badge bg-danger bagde-changelog">@lang('public.version') 1.1.0</span>
                             </li>                        
                         </ul>
                     </div>
@@ -78,12 +78,12 @@
                             <li class="list-group-item">
                                 <i class="fas fa-sync-alt text-primary"></i>
                                 &nbsp;&nbsp;
-                                Osobna przestrzeń robocza dla każdego użytkownika aplikacji.
+                                @lang('public.ver_12_changelog_ptr_1')
                             </li>   
                             <li class="list-group-item">
                                 <i class="fas fa-sync-alt text-primary"></i>
                                 &nbsp;&nbsp;
-                                Opcja przypominania hasła na podstawie adresu e-mail.
+                                @lang('public.ver_12_changelog_ptr_2')
                             </li>   
                         </ul>
                     </div>

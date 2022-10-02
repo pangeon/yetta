@@ -30,5 +30,14 @@ return [
     'description_of_footer_3' => 'Aplikacja napisana przy użyciu frameworka',
     'description_of_footer_4' => 'oraz bezpłatnego szablonu',
     'information' => 'Information',
-    'app' => 'aplikacji'
+    'app' => 'aplikacji',
+    'user_name' => 'Nazwa użytkownika',
+    'password' => 'Hasło',
+    'ver_1_changelog_ptr_1' => 'Pierwsza zabezpieczona wersja aplikacji.',
+    'ver_1_changelog_ptr_2' => 'Możliwość widoku notatek dla gości.',
+    'ver_1_changelog_ptr_3' => 'Edycja danych tylko przez właściciela aplikacji.',
+    'ver_11_changelog_ptr_1' => 'Możliwość rejestracji nowych użytkowników.',
+    'ver_11_changelog_ptr_2' => 'Dodanie wersji językowych: angielski.',
+    'ver_12_changelog_ptr_1' => 'Osobna przestrzeń robocza dla każdego użytkownika aplikacji.',
+    'ver_12_changelog_ptr_2' => 'Opcja przypominania hasła na podstawie adresu e-mail.',
 ];

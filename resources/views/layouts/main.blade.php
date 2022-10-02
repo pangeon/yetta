@@ -28,11 +28,11 @@
                         <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('home') }}">@lang('public.home')</a>
                         </li>
-                        
-                        @guest                        
                         <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('notes.index') }}">@lang('public.notes')</a>
                         </li>
+                        
+                        @guest                        
                         <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('auth.login') }}">@lang('public.log_in')</a>
                         </li>
@@ -66,13 +66,13 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                         <li>
-                            <a role="button" href="lang/pl" class="dropdown-item" type="button">
+                            <a role="button" href="{{ url('lang/pl') }}" class="dropdown-item" type="button">
                                 <img src="{{asset('assets/img/flags/pl.png')}}" width="25px">&nbsp;&nbsp;
                                 <span style="vertical-align: middle;">@lang('public.polish')</span>
                             </a>
                         </li>
                         <li>  
-                            <a role="button" href="lang/en" class="dropdown-item" type="button">
+                            <a role="button" href="{{ url('lang/en') }}" class="dropdown-item" type="button">
                                 <img src="{{ asset('assets/img/flags/gb.png') }}" width="25px">&nbsp;&nbsp;
                                 <span style="vertical-align: middle;">@lang('public.english')</span>
                             </a>    

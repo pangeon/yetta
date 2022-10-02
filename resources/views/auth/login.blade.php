@@ -18,7 +18,7 @@
                             <input type="email" id="email" name="email" class="form-control" placeholder="Email" />
                         </div>
                         <div class="form-outline mb-4">
-                            <input type="password" id="password" name="password" class="form-control" placeholder="Hasło" />
+                            <input type="password" id="password" name="password" class="form-control" placeholder="@lang('public.password')" />
                         </div>
                         <button type="submit" class="login-form-button btn btn-primary btn-block mb-4">@lang('public.log_in')</button>
                         <a class="login-form-button btn btn-primary btn-block mb-4" href="{{ route('auth.new_account')}}">@lang('public.sign_up')</a>

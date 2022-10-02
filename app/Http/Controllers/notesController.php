@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Note;
 use Illuminate\Http\Request;
 
-
 class NotesController extends Controller
 {
     public function index() 
@@ -20,14 +19,20 @@ class NotesController extends Controller
         return view('notes.create');
     }
 
-    function find_for_update($id) {
+    function find_for_update($id) 
+    {
         $note = Note::find($id);
         return view('notes.edit', ['note' => $note]);
     }
 
-    function delete($id) {
+    function delete($id) 
+    {
         Note::destroy($id);
-        return redirect() -> route('notes.index') -> with('message', 'Prawidłowe usunięcie notatki.');
+        if(app()->getLocale() == 'en') {
+            return redirect() -> route('notes.index') -> with('message', 'Correct deletion of the note.');
+        } else {
+            return redirect() -> route('notes.index') -> with('message', 'Prawidłowe usunięcie notatki.');
+        }
     }
 
     function store(Request $request)
@@ -51,9 +56,13 @@ class NotesController extends Controller
 
         $note -> save();
 
-        return redirect() -> route('notes.index') -> with('message', 'Operacja zakończona powodzeniem.');
-        
+        if(app()->getLocale() == 'en') {
+            return redirect() -> route('notes.index') -> with('message', 'Operation succeed.');
+        } else {
+            return redirect() -> route('notes.index') -> with('message', 'Operacja zakończona powodzeniem.');
+        } 
     }
+
     function update($id, Request $request)
     {
         $note = Note::find($id);
@@ -64,7 +73,10 @@ class NotesController extends Controller
 
         $note -> save();
 
-        return redirect() -> route('notes.index') -> with('message', 'Aktualizacja danych zakończona powodzeniem.');
-        
+        if(app()->getLocale() == 'en') {
+            return redirect() -> route('notes.index') -> with('message', 'Data update completed successfully.');
+        } else {
+            return redirect() -> route('notes.index') -> with('message', 'Aktualizacja danych zakończona powodzeniem.');
+        }        
     }
 }
